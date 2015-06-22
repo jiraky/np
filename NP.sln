@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3SAT-Generator", "3SAT-Generator\3SAT-Generator\3SAT-Generator.vcxproj", "{ED18022F-C48B-427E-B25D-9248698D4C6F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3SAT-Verifier", "3SAT-Verifier\3SAT-Verifier\3SAT-Verifier.vcxproj", "{3B26D031-33F5-4122-86A9-D345A442D677}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC-Generator", "VC-Generator\VC-Generator\VC-Generator.vcxproj", "{C6D460B5-7A83-431E-9795-38B865911199}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC-Verifier", "VC-Verifier\VC-Verifier\VC-Verifier.vcxproj", "{61D07C0D-4723-43CA-AA97-5BF519818282}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED18022F-C48B-427E-B25D-9248698D4C6F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED18022F-C48B-427E-B25D-9248698D4C6F}.Debug|Win32.Build.0 = Debug|Win32
+		{ED18022F-C48B-427E-B25D-9248698D4C6F}.Release|Win32.ActiveCfg = Release|Win32
+		{ED18022F-C48B-427E-B25D-9248698D4C6F}.Release|Win32.Build.0 = Release|Win32
+		{3B26D031-33F5-4122-86A9-D345A442D677}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B26D031-33F5-4122-86A9-D345A442D677}.Debug|Win32.Build.0 = Debug|Win32
+		{3B26D031-33F5-4122-86A9-D345A442D677}.Release|Win32.ActiveCfg = Release|Win32
+		{3B26D031-33F5-4122-86A9-D345A442D677}.Release|Win32.Build.0 = Release|Win32
+		{C6D460B5-7A83-431E-9795-38B865911199}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C6D460B5-7A83-431E-9795-38B865911199}.Debug|Win32.Build.0 = Debug|Win32
+		{C6D460B5-7A83-431E-9795-38B865911199}.Release|Win32.ActiveCfg = Release|Win32
+		{C6D460B5-7A83-431E-9795-38B865911199}.Release|Win32.Build.0 = Release|Win32
+		{61D07C0D-4723-43CA-AA97-5BF519818282}.Debug|Win32.ActiveCfg = Debug|Win32
+		{61D07C0D-4723-43CA-AA97-5BF519818282}.Debug|Win32.Build.0 = Debug|Win32
+		{61D07C0D-4723-43CA-AA97-5BF519818282}.Release|Win32.ActiveCfg = Release|Win32
+		{61D07C0D-4723-43CA-AA97-5BF519818282}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

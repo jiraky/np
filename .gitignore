@@ -26,3 +26,16 @@
 *.exe
 *.out
 *.app
+*.opensdf
+*.sdf
+*.suo
+/Debug
+/3SAT-Generator/3SAT-Generator/Debug
+/3SAT-Verifier/3SAT-Verifier/Debug
+/VC-Generator/VC-Generator/Debug
+/VC-Verifier/VC-Verifier/Debug
+/Release
+/3SAT-Generator/3SAT-Generator/Release
+/3SAT-Verifier/3SAT-Verifier/Release
+/VC-Generator/VC-Generator/Release
+/VC-Verifier/VC-Verifier/Release
