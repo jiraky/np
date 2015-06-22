@@ -38,5 +38,19 @@
     <Text Include="resources\output\output_01.txt">
       <Filter>Resource Files\Output Files</Filter>
     </Text>
+    <Text Include="resources\instances\README.txt">
+      <Filter>Resource Files\Instance Files</Filter>
+    </Text>
+    <Text Include="resources\certificates\README.txt">
+      <Filter>Resource Files\Certificate Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\includes\clause.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\includes\formula.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

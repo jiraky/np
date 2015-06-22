@@ -68,8 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\certificates\certificate_01.txt" />
+    <Text Include="resources\certificates\README.txt" />
     <Text Include="resources\instances\instance_01.txt" />
+    <Text Include="resources\instances\README.txt" />
     <Text Include="resources\output\output_01.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\includes\clause.h" />
+    <ClInclude Include="..\..\includes\formula.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
