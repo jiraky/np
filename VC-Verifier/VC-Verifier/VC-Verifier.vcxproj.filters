@@ -13,5 +13,25 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Certificate Files">
+      <UniqueIdentifier>{3f352ee2-f9e7-4333-9c61-e7fd355e78ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Instance Files">
+      <UniqueIdentifier>{12346583-f43a-4651-9372-88a4602b41da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Output Files">
+      <UniqueIdentifier>{7f0e035e-098f-4e28-8dc5-5d4271344444}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\certificates\certificate_01.txt">
+      <Filter>Resource Files\Certificate Files</Filter>
+    </Text>
+    <Text Include="resources\instances\instance_01.txt">
+      <Filter>Resource Files\Instance Files</Filter>
+    </Text>
+    <Text Include="resources\output\output_01.txt">
+      <Filter>Resource Files\Output Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

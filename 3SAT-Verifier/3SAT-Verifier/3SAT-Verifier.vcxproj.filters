@@ -13,5 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Certificate Files">
+      <UniqueIdentifier>{b4822f3a-2e6e-49b9-ae7e-d2ada6248d96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Instance Files">
+      <UniqueIdentifier>{e10feae7-ff58-4459-b96c-f426f6defb6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Output Files">
+      <UniqueIdentifier>{bbde1aed-ba29-49c7-abde-6f39f85ddea6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3SATVerifier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\certificates\certificate_01.txt">
+      <Filter>Resource Files\Certificate Files</Filter>
+    </Text>
+    <Text Include="resources\instances\instance_01.txt">
+      <Filter>Resource Files\Instance Files</Filter>
+    </Text>
+    <Text Include="resources\output\output_01.txt">
+      <Filter>Resource Files\Output Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
