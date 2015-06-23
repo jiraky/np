@@ -24,14 +24,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resources\certificates\certificate_01.txt">
-      <Filter>Resource Files\Certificate Files</Filter>
-    </Text>
     <Text Include="resources\instances\instance_01.txt">
       <Filter>Resource Files\Instance Files</Filter>
     </Text>
     <Text Include="resources\output\output_01.txt">
       <Filter>Resource Files\Output Files</Filter>
+    </Text>
+    <Text Include="resources\certificates\certificate_01.txt">
+      <Filter>Resource Files\Certificate Files</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>

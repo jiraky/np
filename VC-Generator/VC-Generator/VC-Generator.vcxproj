@@ -72,6 +72,9 @@
     <ClInclude Include="..\..\includes\Graph.h" />
     <ClInclude Include="..\..\includes\Node.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VCGenerator.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

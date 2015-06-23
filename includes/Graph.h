@@ -10,6 +10,8 @@ class Graph
 public:
 	vector<Node> nodes;
 
+	int edges_size = 0;
+
 	vector<bool> alive;
 	vector<bool> vc;
 	uint32_t vcCounter = 0;
@@ -19,6 +21,14 @@ public:
 		for (int n = 0; n < vc.size(); ++n) {
 			if (vc[n])
 				result += n + " ";
+		}
+		return result;
+	}
+
+	string ToString() {
+		string result;
+		for (int n = 0; n < vc.size(); ++n) {
+			result += n + " ";
 		}
 		return result;
 	}
@@ -34,6 +44,7 @@ public:
 	{
 		nodes[source].neighbours.push_back(destination);
 		nodes[destination].neighbours.push_back(source);
+		edges_size++;
 	}
 
 	void RemoveEdge(uint32_t source, uint32_t destination)
@@ -47,6 +58,7 @@ public:
 				return;
 			}
 		}
+		edges_size--;
 	}
 
 	bool HasEdge(uint32_t source, uint32_t destination)
