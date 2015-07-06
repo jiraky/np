@@ -6,24 +6,29 @@
 
 using namespace std;
 
-string absolutePath = "D:\\Development\\NP\\3SAT-Verifier\\3SAT-Verifier\\resources\\";
-string istance = absolutePath + "instances\\instance_01.txt";
-string certificate = absolutePath + "certificates\\certificate_01.txt";
-ofstream outputFile(absolutePath + "output\\output_01.txt");
-
 int literals;
 int clauses;
 
 Formula * f;
 
+bool PB_Verifier(std::istream &instance, std::istream &certificate);
+
+#ifndef INCLUDED_SRC
 int main()
 {
-	ifstream inputFile(istance);
+	string absolutePath = "C:\\Users\\stefano\\Documents\\nigoro\\np\\3SAT-Verifier\\3SAT-Verifier\\resources\\";
+	string istance = absolutePath + "instances\\instance_01.txt";
+	string certificateFile = absolutePath + "certificates\\certificate_01.txt";
+	ifstream instance(istance);
+	ifstream certificate(certificateFile);
 
-	if (inputFile.is_open())
-	{
+	bool result = PB_Verifier( instance, certificate);
+}
+#endif
+bool PB_Verifier(std::istream &instance, std::istream &certificate)
+{
 		string line;
-		while (getline(inputFile, line))
+		while (getline(instance, line))
 		{
 			// comment lines, only at top looks like
 			if (line[0] == 'c') continue;
@@ -32,7 +37,7 @@ int main()
 			if (line[0] == 'p') break;
 
 			// Garbage found.
-			return -1;
+			return false;
 		}
 
 		stringstream headParser(line);
@@ -45,7 +50,7 @@ int main()
 		if (type != "cnf")
 		{
 			// Not handled format
-			return -1;
+			return false;
 		}
 
 		headParser >> literals;
@@ -61,10 +66,10 @@ int main()
 			int l3;
 			int endingEntry;
 
-			inputFile >> l1;
-			inputFile >> l2;
-			inputFile >> l3;
-			inputFile >> endingEntry;
+			instance >> l1;
+			instance >> l2;
+			instance >> l3;
+			instance >> endingEntry;
 
 			if (endingEntry != 0)
 			{
@@ -74,22 +79,14 @@ int main()
 
 			f->addClause(abs(l1)-1, abs(l2)-1, abs(l3)-1, l1 > 0, l2 > 0, l3 > 0);
 		}
-	}
 
-	ifstream certFile(certificate);
-
-	if (certFile.is_open())
-	{
 		for (int i = 0; i < literals; ++i)
 		{
 			bool value;
-			certFile >> value;
+			certificate >> value;
 			f->SetAssignment(i, value);
 		}
-	}
 
 	bool issat = f->IsSatisfied();
-
-	outputFile << issat;
-	return !issat;
+	return issat;
 }

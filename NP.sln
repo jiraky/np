@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC-Generator", "VC-Generato
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VC-Verifier", "VC-Verifier\VC-Verifier\VC-Verifier.vcxproj", "{61D07C0D-4723-43CA-AA97-5BF519818282}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WorkFlow", "WorkFlow\WorkFlow.vcxproj", "{616C8AF2-0C70-498F-BAE3-70B7440CACBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +35,10 @@ Global
 		{61D07C0D-4723-43CA-AA97-5BF519818282}.Debug|Win32.Build.0 = Debug|Win32
 		{61D07C0D-4723-43CA-AA97-5BF519818282}.Release|Win32.ActiveCfg = Release|Win32
 		{61D07C0D-4723-43CA-AA97-5BF519818282}.Release|Win32.Build.0 = Release|Win32
+		{616C8AF2-0C70-498F-BAE3-70B7440CACBE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{616C8AF2-0C70-498F-BAE3-70B7440CACBE}.Debug|Win32.Build.0 = Debug|Win32
+		{616C8AF2-0C70-498F-BAE3-70B7440CACBE}.Release|Win32.ActiveCfg = Release|Win32
+		{616C8AF2-0C70-498F-BAE3-70B7440CACBE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
