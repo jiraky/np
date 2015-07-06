@@ -22,6 +22,13 @@ int main()
 	bool result = PA_Verifier(instance, certificate);
 }
 #endif
+
+// FIXME: add a -DPA_Verifier_Server to make it invalid during compilation for user submitted sources.
+bool PA_Verifier_Server(std::istream &instance, std::istream &certificate)
+{
+	return PA_Verifier(instance, certificate);
+}
+
 bool PA_Verifier(std::istream &instance, std::istream &certificate)
 {
 	instance >> nodes;

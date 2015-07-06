@@ -25,6 +25,13 @@ int main()
 	bool result = PB_Verifier( instance, certificate);
 }
 #endif
+
+// FIXME: add a -DPB_Verifier_Server to make it invalid during compilation for user submitted sources.
+bool PB_Verifier_Server(std::istream &instance, std::istream &certificate)
+{
+	return PB_Verifier(instance, certificate);
+}
+
 bool PB_Verifier(std::istream &instance, std::istream &certificate)
 {
 		string line;
