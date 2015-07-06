@@ -8,7 +8,7 @@ int edges;
 
 Graph * g;
 
-bool PA_Verifier(std::istream &instance, std::istream &certificate);
+bool PB_Verifier(std::istream &instance, std::istream &certificate);
 
 #ifndef INCLUDED_SRC
 int main()
@@ -19,17 +19,17 @@ int main()
 	ifstream instance(istance);
 	ifstream certificate(certificateFile);
 
-	bool result = PA_Verifier(instance, certificate);
+	bool result = PB_Verifier(instance, certificate);
 }
 #endif
 
 // FIXME: add a -DPA_Verifier_Server to make it invalid during compilation for user submitted sources.
-bool PA_Verifier_Server(std::istream &instance, std::istream &certificate)
+bool PB_Verifier_Server(std::istream &instance, std::istream &certificate)
 {
-	return PA_Verifier(instance, certificate);
+	return PB_Verifier(instance, certificate);
 }
 
-bool PA_Verifier(std::istream &instance, std::istream &certificate)
+bool PB_Verifier(std::istream &instance, std::istream &certificate)
 {
 	instance >> nodes;
 	instance >> edges;

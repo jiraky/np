@@ -69,6 +69,7 @@
     <ClInclude Include="..\includes\userInterface.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\3SAT-Generator\3SAT-Generator\3SATGenerator.cpp" />
     <ClCompile Include="..\3SAT-Verifier\3SAT-Verifier\3SATVerifier.cpp" />
     <ClCompile Include="..\VC-Generator\VC-Generator\VCGenerator.cpp" />
     <ClCompile Include="..\VC-Verifier\VC-Verifier\VCVerifier.cpp" />

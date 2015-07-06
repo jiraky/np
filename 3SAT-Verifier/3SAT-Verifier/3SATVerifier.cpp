@@ -11,7 +11,7 @@ int clauses;
 
 Formula * f;
 
-bool PB_Verifier(std::istream &instance, std::istream &certificate);
+bool PA_Verifier(std::istream &instance, std::istream &certificate);
 
 #ifndef INCLUDED_SRC
 int main()
@@ -22,17 +22,17 @@ int main()
 	ifstream instance(istance);
 	ifstream certificate(certificateFile);
 
-	bool result = PB_Verifier( instance, certificate);
+	bool result = PA_Verifier( instance, certificate);
 }
 #endif
 
-// FIXME: add a -DPB_Verifier_Server to make it invalid during compilation for user submitted sources.
-bool PB_Verifier_Server(std::istream &instance, std::istream &certificate)
+// FIXME: add a -DPA_Verifier_Server to make it invalid during compilation for user submitted sources.
+bool PA_Verifier_Server(std::istream &instance, std::istream &certificate)
 {
-	return PB_Verifier(instance, certificate);
+	return PA_Verifier(instance, certificate);
 }
 
-bool PB_Verifier(std::istream &instance, std::istream &certificate)
+bool PA_Verifier(std::istream &instance, std::istream &certificate)
 {
 		string line;
 		while (getline(instance, line))

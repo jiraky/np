@@ -139,7 +139,7 @@ int Hanoi(std::ostream &instance, std::ostream &certificate, int num_nodes)
 	return 0;
 }
 
-int PA_Generate(std::ostream &instance, std::ostream &certificate, std::unordered_map<std::string, std::string> options)
+int PB_Generate(std::ostream &instance, std::ostream &certificate, std::unordered_map<std::string, std::string> options)
 {
 	if (options["type"] == "hanoi")
 	{
@@ -157,7 +157,7 @@ int main()
 	ofstream instance(instanceFile);
 	ofstream certificate(certificateFile);
 	std::unordered_map<std::string, std::string> options({ { "type", "hanoi" }, { "num_nodes", "11" } });
-	PA_Generate(instance, certificate, options);
+	PB_Generate(instance, certificate, options);
 }
 #endif
 

@@ -72,6 +72,9 @@
     <ClInclude Include="..\..\includes\clause.h" />
     <ClInclude Include="..\..\includes\formula.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3SATGenerator.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

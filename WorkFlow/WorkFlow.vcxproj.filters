@@ -35,5 +35,8 @@
     <ClCompile Include="..\VC-Generator\VC-Generator\VCGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\3SAT-Generator\3SAT-Generator\3SATGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
