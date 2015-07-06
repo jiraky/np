@@ -44,6 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);INCLUDED_SRC</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -64,9 +65,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\includes\backendInterface.h" />
     <ClInclude Include="..\includes\userInterface.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\3SAT-Verifier\3SAT-Verifier\3SATVerifier.cpp" />
+    <ClCompile Include="..\VC-Generator\VC-Generator\VCGenerator.cpp" />
+    <ClCompile Include="..\VC-Verifier\VC-Verifier\VCVerifier.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

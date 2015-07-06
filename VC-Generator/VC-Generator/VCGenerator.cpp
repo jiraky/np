@@ -5,15 +5,10 @@
 #include <iostream>
 #include <queue>
 #include <list>
+#include <unordered_map>
 
 using namespace std;
 
-string absolutePath = "D:\\Development\\NP\\VC-Generator\\VC-Generator\\resources\\";
-string instance = absolutePath + "instances\\instance_01.txt";
-string certificate = absolutePath + "certificates\\certificate_01.txt";
-
-ofstream instanceFile(instance);
-ofstream certficateFile(certificate);
 
 class Hanoi_Triangle {
 public:
@@ -35,7 +30,7 @@ public:
 
 int N = 0;
 
-int Hanoi(int num_nodes)
+int Hanoi(std::ostream &instance, std::ostream &certificate, int num_nodes)
 {
 
 	int hanoi_size = (int) floor(pow((float)num_nodes, 1.0f / 3.0f));
@@ -51,7 +46,7 @@ int Hanoi(int num_nodes)
 		return -1;
 
 	int edges = (int) ((int)3 * ((pow(3.0, hanoi_size)- 1))/ 2)+ rand_nodes;
-	instanceFile << num_nodes << ' ' << edges << '\n';
+	instance << num_nodes << ' ' << edges << '\n';
 	
 	int tmp1 = N;
 	int tmp2 = N + 1;
@@ -106,14 +101,14 @@ int Hanoi(int num_nodes)
 		call -= 3;
 		v.push_back(Hanoi_Triangle(h, s, d));
 
-		instanceFile << str;
+		instance << str;
 	}
 	int n_trian = v.size();
 	while (v.size() != 1) {
 		Hanoi_Triangle x = v[0];
 		Hanoi_Triangle y = v[1];
 		Hanoi_Triangle z = v[2];
-		instanceFile << x.s << " " << y.h << '\n' << x.d << " " << z.h << '\n' << y.d << " " << z.s << "\n";
+		instance << x.s << " " << y.h << '\n' << x.d << " " << z.h << '\n' << y.d << " " << z.s << "\n";
 		v.erase(v.begin());
 		v.erase(v.begin());
 		v.erase(v.begin());
@@ -122,15 +117,14 @@ int Hanoi(int num_nodes)
 
 	int certSize = n_trian * 6;
 
-	certficateFile << certSize;
+	certificate << certSize;
 
 	for (int i = 0; i < N; ++i)
 	{
 		if (i % 3 != 0)
-			certficateFile << " " << i;
+			certificate << " " << i;
 	}
 
-	certficateFile.close();
 	int max = N;
 
 	while(N < num_nodes)
@@ -139,17 +133,32 @@ int Hanoi(int num_nodes)
 		int choose;
 		while ((choose = rand() % max) % 3 == 0) {};
 
-		instanceFile << last << ' ' << choose << '\n';
+		instance << last << ' ' << choose << '\n';
 	}
-
-	instanceFile << "# Generated throught HANOI sub procedure";
-
-	instanceFile.close();
 
 	return 0;
 }
 
+int PA_Generate(std::ostream &instance, std::ostream &certificate, std::unordered_map<std::string, std::string> options)
+{
+	if (options["type"] == "hanoi")
+	{
+		return Hanoi(instance, certificate, atoi(options["num_nodes"].c_str()));
+	}
+}
+
+
+#ifndef INCLUDED_SRC
 int main()
 {
-	Hanoi(11);
+	string absolutePath = "D:\\Development\\NP\\VC-Generator\\VC-Generator\\resources\\";
+	string instanceFile = absolutePath + "instances\\instance_01.txt";
+	string certificateFile = absolutePath + "certificates\\certificate_01.txt";
+	ofstream instance(instanceFile);
+	ofstream certificate(certificateFile);
+	std::unordered_map<std::string, std::string> options({ { "type", "hanoi" }, { "num_nodes", "11" } });
+	PA_Generate(instance, certificate, options);
 }
+#endif
+
+
