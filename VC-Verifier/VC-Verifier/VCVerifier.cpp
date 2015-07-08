@@ -3,10 +3,11 @@
 #include "../../includes/graph.h"
 using namespace std;
 
-int nodes;
-int edges;
+static int nodes;
+static int edges;
+static int k;
 
-Graph * g;
+static Graph * g;
 
 bool PB_Verifier(std::istream &instance, std::istream &certificate);
 
@@ -33,6 +34,7 @@ bool PB_Verifier(std::istream &instance, std::istream &certificate)
 {
 	instance >> nodes;
 	instance >> edges;
+	instance >> k;
 
 	g = new Graph(nodes);
 
@@ -61,5 +63,5 @@ bool PB_Verifier(std::istream &instance, std::istream &certificate)
 
 	bool isVC = g->isVC(cert_vc);
 
-	return isVC;
+	return isVC && g->vcCounter <= k;
 }

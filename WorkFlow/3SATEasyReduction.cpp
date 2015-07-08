@@ -112,10 +112,10 @@ void ReductionEasy_FromPA_ToPB(std::istream &PA_Instance, std::istream &PA_Certi
 		{
 			g->ExcludeFromVC(startL3 + i);
 		}
-		else
+		/*else
 		{
 			break;
-		}
+		}*/
 	}
 
 	for (int i = startPos; i < startNeg; ++i)
