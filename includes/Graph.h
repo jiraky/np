@@ -27,8 +27,8 @@ public:
 
 	string ToString() {
 		string result;
-		for (int n = 0; n < vc.size(); ++n) {
-			result += n + " ";
+		for (int n = 0; n < nodes.size(); ++n) {
+			result += n + "" + nodes[n].GetNeighAsString() + "\n";
 		}
 		return result;
 	}
