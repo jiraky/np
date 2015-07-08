@@ -63,5 +63,5 @@ bool PB_Verifier(std::istream &instance, std::istream &certificate)
 
 	bool isVC = g->isVC(cert_vc);
 
-	return isVC && g->vcCounter <= k;
+	return isVC && cert_vc_size <= k;
 }

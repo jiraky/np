@@ -97,6 +97,10 @@ void ReductionEasy_FromPA_ToPB(std::istream &PA_Instance, std::istream &PA_Certi
 		f->SetAssignment(i, value);
 	}
 
+	PB_Output_Instance << g->nodes.size() << " " << g->edges_size << " " << (literals + 2 * clauses) << endl;
+	PB_Output_Instance << g->ToString();
+
+	// Create certificate.
 	for (int i = 0; i < clauses; ++i)
 	{
 		Clause tmp = f->clauses[i];
@@ -126,6 +130,6 @@ void ReductionEasy_FromPA_ToPB(std::istream &PA_Instance, std::istream &PA_Certi
 		}
 	}
 
-	PB_Output_Instance << g->ToString();
-	PB_Output_Certificate << g->VCtoString();
+
+	PB_Output_Certificate << g->vcCounter << " " << g->VCtoString();
 }

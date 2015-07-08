@@ -26,7 +26,7 @@ public:
 	}
 
 	string ToString() {
-		string result = to_string(nodes.size()) + " " + to_string(edges_size) + "\n";
+		string result;// = to_string(nodes.size()) + " " + to_string(edges_size) + "\n";
 
 		vector<bool> printed;
 		printed.resize(nodes.size());
@@ -35,8 +35,8 @@ public:
 		for (int n = 0; n<nodes.size(); n++) {
 			printed[n] = true;
 			for (int ne = 0; ne < nodes[n].neighbours.size(); ++ne) {
-				if (!printed[ne]) {
-					result += to_string(n) + " " + to_string(ne) + "\n";
+				if (!printed[nodes[n].neighbours[ne]]) {
+					result += to_string(n) + " " + to_string(nodes[n].neighbours[ne]) + "\n";
 				}
 			}
 		}
