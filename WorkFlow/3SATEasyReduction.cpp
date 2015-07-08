@@ -8,11 +8,11 @@
 #include <unordered_map>
 #include "../includes/formula.h"
 
-int literals;
-int clauses;
+static int literals;
+static int clauses;
 
-Formula * f;
-Graph *g;
+static Formula * f;
+static Graph *g;
 
 void ReductionEasy_FromPA_ToPB(std::istream &PA_Instance, std::istream &PA_Certificate, std::ostream &PB_Output_Instance, std::ostream &PB_Output_Certificate)
 {
@@ -52,13 +52,13 @@ void ReductionEasy_FromPA_ToPB(std::istream &PA_Instance, std::istream &PA_Certi
 	int startPos = 0;
 	int startNeg = literals;
 	int startL1 = startNeg + literals;
-	int startL2 = startL2 + clauses;
-	int startL3 = startL3 + clauses;
+	int startL2 = startL1 + clauses;
+	int startL3 = startL2 + clauses;
 
 	// variable gadget.
 	for (int i = 0; i < literals; ++i)
 	{
-		g->AddEdge(startPos + i, startNeg + 1);
+		g->AddEdge(startPos + i, startNeg + i);
 	}
 
 	for (int i = 0; i < clauses; ++i)
@@ -90,5 +90,42 @@ void ReductionEasy_FromPA_ToPB(std::istream &PA_Instance, std::istream &PA_Certi
 		g->AddEdge(startL3 + i, l3 > 0 ? startPos + abs(l3) - 1 : startNeg + abs(l3) - 1);
 	}
 
+	for (int i = 0; i < literals; ++i)
+	{
+		bool value;
+		PA_Certificate >> value;
+		f->SetAssignment(i, value);
+	}
+
+	for (int i = 0; i < clauses; ++i)
+	{
+		Clause tmp = f->clauses[i];
+		if (f->assignment[tmp.l1_pos] == tmp.l1_state)
+		{
+			g->ExcludeFromVC(startL1 + i);
+		}
+		else if (f->assignment[tmp.l2_pos] == tmp.l2_state)
+		{
+			g->ExcludeFromVC(startL2 + i);
+		}
+		else if (f->assignment[tmp.l3_pos] == tmp.l3_state)
+		{
+			g->ExcludeFromVC(startL3 + i);
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	for (int i = startPos; i < startNeg; ++i)
+	{
+		if (!g->vc[i])
+		{
+			g->AddToVC(startNeg + i);
+		}
+	}
+
 	PB_Output_Instance << g->ToString();
+	PB_Output_Certificate << g->VCtoString();
 }

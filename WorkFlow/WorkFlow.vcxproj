@@ -73,6 +73,7 @@
     <ClCompile Include="..\3SAT-Verifier\3SAT-Verifier\3SATVerifier.cpp" />
     <ClCompile Include="..\VC-Generator\VC-Generator\VCGenerator.cpp" />
     <ClCompile Include="..\VC-Verifier\VC-Verifier\VCVerifier.cpp" />
+    <ClCompile Include="3SATEasyReduction.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

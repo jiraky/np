@@ -20,7 +20,7 @@ public:
 		string result;
 		for (int n = 0; n < vc.size(); ++n) {
 			if (vc[n])
-				result += n + " ";
+				result += to_string(n) + " ";
 		}
 		return result;
 	}
