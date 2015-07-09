@@ -69,8 +69,8 @@
     <Text Include="resources\output\output_01.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\includes\Graph.h" />
-    <ClInclude Include="..\..\includes\Node.h" />
+    <ClInclude Include="..\..\includes\graph.h" />
+    <ClInclude Include="..\..\includes\node.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VCGenerator.cpp" />
