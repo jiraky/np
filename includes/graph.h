@@ -2,7 +2,7 @@
 #define GRAPH_H
 #include <vector>
 #include <cinttypes>
-#include "Node.h"
+#include "node.h"
 
 using namespace std;
 class Graph
