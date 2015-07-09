@@ -41,5 +41,8 @@
     <ClCompile Include="3SATEasyReduction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="3SATHardReduction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -28,7 +28,7 @@ public:
 	}
 };
 
-int N = 0;
+static int N = 0;
 
 int Hanoi(std::ostream &instance, std::ostream &certificate, int num_nodes)
 {

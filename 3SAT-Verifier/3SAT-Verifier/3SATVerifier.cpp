@@ -6,10 +6,10 @@
 
 using namespace std;
 
-int literals;
-int clauses;
+static int literals;
+static int clauses;
 
-Formula * f;
+static Formula * f;
 
 bool PA_Verifier(std::istream &instance, std::istream &certificate);
 
