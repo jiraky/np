@@ -3,8 +3,8 @@
 #include <string>
 #include <sstream>
 
-#include "../includes/userInterface.h"
-#include "../includes/backendInterface.h"
+#include "includes/userInterface.h"
+#include "includes/backendInterface.h"
 
 using namespace std;
 
@@ -15,14 +15,11 @@ static struct pointType
 	int reductionHard = 0;
 } points;
 
+int k = 1;
 
 int main()
 {
-	int k = 1;
-	string absolutePath = "C:\\Users\\stefano\\Documents\\nigoro\\np\\3SAT-Verifier\\3SAT-Verifier\\resources\\";
-	/*string istance = absolutePath + "instances\\instance_01.txt";
-	string certificateFile = absolutePath + "certificates\\certificate_01.txt";*/
-	
+		
 	string PA_InstanceFileName;
 	string PA_CertificateFileName;
 

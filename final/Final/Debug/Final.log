@@ -1,0 +1,72 @@
+﻿Build started 10/07/2015 14:19:26.
+     1>Project "D:\Development\NP\final\Final\Final.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\server\main.cpp ..\server\PA_generator.cpp ..\server\PA_verifier_server.cpp ..\server\PB_verifier_server.cpp ..\user\PA_to_PB_EasyReduction.cpp ..\user\PA_to_PB_HardReduction.cpp ..\user\PA_verifier.cpp ..\user\PB_verifier.cpp
+         PB_verifier.cpp
+     1>d:\development\np\final\user\pb_verifier.cpp(30): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pb_verifier.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pb_verifier.cpp(46): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pb_verifier.cpp(114): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pb_verifier.cpp(163): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pb_verifier.cpp(165): warning C4018: '<' : signed/unsigned mismatch
+         PA_verifier.cpp
+     1>d:\development\np\final\user\pa_verifier.cpp(70): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_verifier.cpp(94): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_verifier.cpp(105): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_verifier.cpp(164): warning C4305: 'return' : truncation from 'int' to 'bool'
+         PA_to_PB_HardReduction.cpp
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(45): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(115): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(164): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(166): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(232): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(256): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_hardreduction.cpp(267): warning C4018: '<' : signed/unsigned mismatch
+         PA_to_PB_EasyReduction.cpp
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(31): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(45): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(47): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(115): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(164): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(166): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(232): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(256): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\user\pa_to_pb_easyreduction.cpp(267): warning C4018: '<' : signed/unsigned mismatch
+         PB_verifier_server.cpp
+     1>d:\development\np\final\server\includes\graph.h(22): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(36): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(106): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(155): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(157): warning C4018: '<' : signed/unsigned mismatch
+         PA_verifier_server.cpp
+     1>d:\development\np\final\server\includes\formula.h(25): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\formula.h(49): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\formula.h(60): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\pa_verifier_server.cpp(63): warning C4305: 'return' : truncation from 'int' to 'bool'
+         PA_generator.cpp
+     1>d:\development\np\final\server\includes\graph.h(22): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(36): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(38): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(106): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(155): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\development\np\final\server\includes\graph.h(157): warning C4018: '<' : signed/unsigned mismatch
+         main.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Development\NP\final\Final\Debug\Final.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Development\NP\final\Final\Debug\Final.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Development\NP\final\Final\Debug\Final.lib" /MACHINE:X86 Debug\main.obj
+         Debug\PA_generator.obj
+         Debug\PA_verifier_server.obj
+         Debug\PB_verifier_server.obj
+         Debug\PA_to_PB_EasyReduction.obj
+         Debug\PA_to_PB_HardReduction.obj
+         Debug\PA_verifier.obj
+         Debug\PB_verifier.obj
+         Final.vcxproj -> D:\Development\NP\final\Final\Debug\Final.exe
+     1>Done Building Project "D:\Development\NP\final\Final\Final.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.96

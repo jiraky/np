@@ -1,5 +1,5 @@
 #include <fstream>
-#include "../../includes/formula.h"
+#include "includes/formula.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -9,17 +9,9 @@ using namespace std;
 static int literals;
 static int clauses;
 
-static Formula * f;
+static server_sat::Formula * f;
 
-bool PA_Verifier(std::istream &instance, std::istream &certificate);
-
-// FIXME: add a -DPA_Verifier_Server to make it invalid during compilation for user submitted sources.
 bool PA_Verifier_Server(std::istream &instance, std::istream &certificate)
-{
-	return PA_Verifier(instance, certificate);
-}
-
-bool PA_Verifier(std::istream &instance, std::istream &certificate)
 {
 		string line;
 		while (getline(instance, line))
@@ -51,7 +43,7 @@ bool PA_Verifier(std::istream &instance, std::istream &certificate)
 		headParser >> clauses;
 
 		// For the rest just read directly the file.
-		f = new Formula(clauses, literals);
+		f = new server_sat::Formula(clauses, literals);
 
 		for (int i = 0; i < clauses; ++i)
 		{

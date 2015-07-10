@@ -5,11 +5,11 @@
 #include <vector>
 
 using namespace std;
-
-class Node
-{
-public:
-	vector<uint32_t> neighbours;
+namespace server_vc {
+	class Node
+	{
+	public:
+		vector<uint32_t> neighbours;
+	};
 };
-
 #endif
