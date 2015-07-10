@@ -13,20 +13,30 @@ static struct pointType
 	int verifierA = 0;
 	int verifierB = 0;
 	int reductionHard = 0;
+
+	int max_verifierA = 1;
+	int max_verifierB = 1;
+	int max_reductionHard = 5;
 } points;
 
-int k = 1;
+static int k = 1;
+
+string PA = "3-SAT";
+string PB = "K-MIN-VC";
 
 int main()
 {
-		
-	string PA_InstanceFileName;
-	string PA_CertificateFileName;
+	cout << "NP Completeness Prover" << endl;
+	cout << "Version: 0.1 (Alpha release)" << endl;
+	cout << "Problem A: " << PA << endl;
+	cout << "Problem B: " << PB << endl;
 
-	string PB_InstanceFileName;
-	string PB_CertificateFileName;
-
-
+	cout << "----------------------" << endl;
+	cout << "Phase 1: '" << PA << "' Validation" << endl;
+	cout << " - Round:      " << k << endl;
+	cout << " - Max Points: " << points.max_verifierA << endl;
+	cout << " - Validation: " << PA << "-User-Verifier == " << PA << "-Server-Verifier" << endl;
+	cout << "Please wait... ";
 	for (int i = 0; i < k; ++i)
 	{
 		ostringstream PA_Instance;
@@ -53,7 +63,15 @@ int main()
 			break;
 		}
 	}
+	cout << "DONE" << endl;
+	cout << "Result: " << points.verifierA << "/" << points.max_verifierA << endl;
 
+	cout << "----------------------" << endl;
+	cout << "Phase 2: " << PA << "<=" << PB << " Easy Reduction" << endl;
+	cout << " - Round:      " << k << endl;
+	cout << " - Max Points: " << points.max_verifierB << endl;
+	cout << " - Validation: " << PB << "-User-Verifier == " << PB << "-Server-Verifier" << endl;
+	cout << "Please wait... ";
 	for (int i = 0; i < k; ++i)
 	{
 		ostringstream PA_Instance;
@@ -86,7 +104,16 @@ int main()
 			break;
 		}
 	}
+	cout << "DONE" << endl;
+	cout << "Result: " << points.verifierB << "/" << points.max_verifierB << endl;
 
+	cout << "----------------------" << endl;
+	cout << "Phase 3: " << PA << "<=" << PB << " Hard Reduction" << endl;
+	cout << " - Round:      1" << endl;
+	cout << " - Max Points: " << points.max_reductionHard << endl;
+	cout << " - Validation: " << PA << "-User-Verifier == " << PA << "-Server-Verifier" << endl;
+	cout << "          AND  " << PB << "-User-Verifier == " << PB << "-Server-Verifier" << endl;
+	cout << "Please wait... ";
 	ostringstream PA_Instance;
 	ostringstream PA_Certificate;
 	std::unordered_map<std::string, std::string> PA_options({ { "type", "hanoi" }, { "num_nodes", "11" } });
@@ -118,4 +145,13 @@ int main()
 	{
 		points.reductionHard = 1;
 	}
+	
+	cout << "DONE" << endl;
+	cout << "Result: " << points.reductionHard << "/" << points.max_reductionHard << endl << endl;
+
+	#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+		system("pause");
+	#else
+		system("read");
+	#endif
 }
